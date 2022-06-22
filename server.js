@@ -60,8 +60,6 @@ app.get("/", async (req, res) => {
             // }
         });
 
-
-
         return res.send("See in the console log")
     } catch (err) {
         return res.send(err)
