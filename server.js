@@ -8,7 +8,6 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
-
 mongoose.connect(process.env.DATABASE_URL, () => {
     console.log('mongodb connected')
 },
@@ -38,8 +37,9 @@ app.post("/", async (req, res) => {
         return res.send("encrypted")
     }
     catch (err) {
-        return res.send(err)
+
         console.log(err)
+        return res.send(err)
     }
 })
 
